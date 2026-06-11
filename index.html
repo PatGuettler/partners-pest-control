@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Partners Pest Solutions — Professional residential and commercial pest control. Licensed, insured, and family owned.">
+  <title>Partners Pest Solutions | Professional Pest Control</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    /* Scroll reveal */
+    [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <div id="nav-slot"></div>
+
+  <main>
+    <!-- ── Hero ── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg"></div>
+      <img class="hero__watermark" src="images/logo.jpg" alt="" aria-hidden="true">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Partners Pest Solutions</p>
+          <h1 class="hero__title">
+            Protect Your<br>
+            <span>Home &amp; Business</span>
+          </h1>
+          <p class="hero__subtitle">
+            Professional pest control you can trust. Licensed, insured, and locally owned — serving residential and commercial clients with integrity.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="pages/contact.html">Request an Inspection</a>
+            <a class="btn btn-outline" href="https://app.fieldworkhq.com/portal/YOUR-COMPANY-ID" target="_blank" rel="noopener">Pay My Bill</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trust strip ── -->
+    <div class="trust-strip" role="list" aria-label="Trust badges">
+      <div class="container">
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Family Owned
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          Residential &amp; Commercial
+        </div>
+        <div class="trust-item" role="listitem">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Satisfaction Guaranteed
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Services Overview ── -->
+    <section class="section section--surface" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header text-center" data-reveal>
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title" id="services-heading">Common Pest Services</h2>
+          <div class="divider divider--center"></div>
+          <p class="section-subtitle" style="margin: 0 auto;">From one-time treatments to ongoing protection plans, we handle the pests that threaten your property.</p>
+        </div>
+        <div class="grid-4" data-reveal>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3 class="service-card__title">General Pest</h3>
+            <p class="service-card__desc">Ants, roaches, spiders, silverfish, and more. Year-round protection plans for your home or business.</p>
+            <a class="btn btn-ghost" href="pages/general-pest.html">Learn More</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3 class="service-card__title">Termite Control</h3>
+            <p class="service-card__desc">Inspections, liquid treatments, and bait systems to protect your property from costly structural damage.</p>
+            <a class="btn btn-ghost" href="pages/termite.html">Learn More</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <h3 class="service-card__title">Rodent Control</h3>
+            <p class="service-card__desc">Exclusion, trapping, and baiting programs to eliminate mice and rats — and keep them out for good.</p>
+            <a class="btn btn-ghost" href="pages/rodent.html">Learn More</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 7 7 4 7 4s5 2 5 8M12 12c0-5 5-8 5-8s-5 3-5 8"/></svg>
+            </div>
+            <h3 class="service-card__title">Mosquito &amp; Tick</h3>
+            <p class="service-card__desc">Seasonal yard treatments that dramatically reduce mosquito and tick populations so you can enjoy your outdoor spaces.</p>
+            <a class="btn btn-ghost" href="pages/mosquito.html">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Choose Us ── -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-grid">
+          <div>
+            <p class="section-label">Why Partners Pest</p>
+            <h2 class="section-title" id="why-heading">Experience You Can Count On</h2>
+            <div class="divider"></div>
+            <div class="why-list" data-reveal>
+              <div class="why-item">
+                <div class="why-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <p class="why-item__title">Licensed &amp; Fully Insured</p>
+                  <p class="why-item__desc">All technicians are state-certified and carry full liability coverage, so you're protected every step of the way.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <p class="why-item__title">Guaranteed Results</p>
+                  <p class="why-item__desc">We stand behind our work. If pests return between treatments, we come back at no additional charge.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <p class="why-item__title">Locally &amp; Family Owned</p>
+                  <p class="why-item__desc">We're your neighbors. We care about this community and treat every home like it's our own.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <div>
+                  <p class="why-item__title">Residential &amp; Commercial</p>
+                  <p class="why-item__desc">Whether it's a single-family home or a multi-unit commercial property, we have a program that fits.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-visual" data-reveal aria-hidden="true">
+            <img src="images/logo.jpg" alt="Partners Pest Solutions technician at work" loading="lazy">
+            <div class="why-visual__badge">
+              <strong>100%</strong>
+              <span>Satisfaction Guarantee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ── -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <div>
+          <h2 class="cta-banner__title" id="cta-heading">Ready to Get Started?</h2>
+          <p class="cta-banner__sub">Request a free inspection today — no obligation, no pressure.</p>
+        </div>
+        <a class="btn btn-outline" href="pages/contact.html">Request an Inspection</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
