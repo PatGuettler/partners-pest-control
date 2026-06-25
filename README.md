@@ -2,6 +2,8 @@
 
 Static HTML/CSS/JS website for [partnerspestsolutions.com](https://partnerspestsolutions.com). No build step required — upload and go.
 
+**→ See [PLAN.md](./PLAN.md) for the full go-live checklist and remaining work.**
+
 ---
 
 ## Files
