@@ -237,4 +237,16 @@
   .hero__actions { justify-content: center; }
   .hero__content { text-align: center; }
   .hero__eyebrow { justify-content: center; }
+
+  .hero__bg {
+    background:
+      radial-gradient(ellipse at 50% 45%, rgba(43,74,90,0.8) 0%, transparent 65%),
+      linear-gradient(135deg, var(--clr-navy) 0%, #0D1B24 100%);
+  }
+
+  .hero__watermark {
+    left: 50%;
+    top: 45%;
+    width: min(72vw, 340px);
+  }
 }
