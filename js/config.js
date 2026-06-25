@@ -9,5 +9,5 @@ window.SITE_CONFIG = {
 
   // Paste the Alabama pest control license number here when you have it.
   // Example: '12345'. Leave empty to show "Licensed & Insured in Alabama" instead.
-  licenseNumber: '7001365',
+  licenseNumber: '700136',
 };
