@@ -6,11 +6,24 @@
 (function () {
   'use strict';
 
+  const SITE = window.SITE_CONFIG || {
+    phone: '(256) 302-6660',
+    phoneTel: '+12563026660',
+    email: 'info@partnerspestsolutions.com',
+    licenseNumber: '',
+  };
+
+  function licenseText() {
+    return SITE.licenseNumber
+      ? `License #: ${SITE.licenseNumber}`
+      : 'Licensed & Insured in Alabama';
+  }
+
   const NAV_HTML = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="../index.html" class="nav__logo" aria-label="Partners Pest Solutions - Home">
-          <img src="../images/logo.jpg" alt="Partners Pest Solutions logo" width="80" height="73">
+          <img src="../images/logo.jpg" alt="Partners Pest Solutions logo" width="110" height="101">
         </a>
         <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -24,9 +37,8 @@
           <li><a class="nav__link" href="../pages/about.html"         data-page="about.html">About</a></li>
           <li><a class="nav__link" href="../pages/contact.html"       data-page="contact.html">Contact</a></li>
           <li class="nav__cta">
-            <a class="btn btn-primary" href="tel:+12563026660">
-              Contact Us — (256) 302-6660
-            </a>
+            <a class="btn btn-primary" href="../pages/contact.html">Contact Us</a>
+            <a class="nav__phone" href="tel:${SITE.phoneTel}">${SITE.phone}</a>
           </li>
         </ul>
       </div>
@@ -61,9 +73,9 @@
           <div>
             <p class="footer__heading">Contact</p>
             <ul class="footer__links">
-              <li><a class="footer__link" href="tel:+12563026660">(256) 302-6660</a></li>
-              <li><a class="footer__link" href="mailto:info@partnerspestsolutions.com">info@partnerspestsolutions.com</a></li>
-              <li><span class="footer__link">License #: [STATE-LICENSE]</span></li>
+              <li><a class="footer__link" href="tel:${SITE.phoneTel}">${SITE.phone}</a></li>
+              <li><a class="footer__link" href="mailto:${SITE.email}">${SITE.email}</a></li>
+              <li><span class="footer__link" data-license></span></li>
             </ul>
           </div>
         </div>
@@ -89,6 +101,13 @@
     return path.endsWith('index.html') || path.endsWith('/') || path === '';
   }
 
+  function applySiteConfig() {
+    const text = licenseText();
+    document.querySelectorAll('[data-license]').forEach(el => {
+      el.textContent = text;
+    });
+  }
+
   function inject() {
     const navSlot    = document.getElementById('nav-slot');
     const footerSlot = document.getElementById('footer-slot');
@@ -96,6 +115,7 @@
 
     if (navSlot)    navSlot.innerHTML    = root ? NAV_HTML_ROOT    : NAV_HTML;
     if (footerSlot) footerSlot.innerHTML = root ? FOOTER_HTML_ROOT : FOOTER_HTML;
+    applySiteConfig();
   }
 
   document.addEventListener('DOMContentLoaded', inject);

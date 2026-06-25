@@ -78,6 +78,18 @@
   font-size: var(--text-sm);
 }
 .sidebar-card .btn { width: 100%; justify-content: center; }
+.sidebar-card__phone {
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm);
+  color: var(--clr-text-muted);
+  text-align: center;
+}
+.sidebar-card__phone a {
+  color: var(--clr-crimson);
+  font-weight: 600;
+  text-decoration: none;
+}
+.sidebar-card__phone a:hover { text-decoration: underline; }
 
 .sidebar-services { background: var(--clr-surface); border: 1px solid var(--clr-border); }
 .sidebar-services .sidebar-card__title { color: var(--clr-text); }

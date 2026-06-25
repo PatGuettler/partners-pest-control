@@ -356,20 +356,17 @@ The contact form has an optional photo upload field. On Formspree's **free plan,
 2. It may appear on their truck decals, invoices, or state regulatory paperwork
 3. Alabama Department of Agriculture & Industries regulates pest control — the client should have this on file
 
-#### Step 2 — Update the website (do this yourself or ask your developer)
+#### Step 2 — Add the license number to the site
 
-1. Open `js/components.js`
-2. Find `[STATE-LICENSE]` in the footer HTML (around line 66)
-3. Replace with the real number, e.g. `License #: AL-12345`
-4. Open `pages/contact.html`
-5. Find `[STATE-LICENSE-NUMBER]` (around line 202)
-6. Replace with the same number
-7. Save, commit, push — site redeploys automatically
+1. Open `js/config.js`
+2. Set `licenseNumber` to the real value, e.g. `licenseNumber: '12345',`
+3. Save, commit, push — the footer and contact page update automatically
+4. If left empty, the site shows **"Licensed & Insured in Alabama"** instead of a placeholder
 
 #### Step 3 — Verify
 
-1. Load any page and scroll to the footer — license should display
-2. Load the Contact page — license should appear in the contact info sidebar
+1. Load any page and scroll to the footer — license line should show real number or fallback text
+2. Load the Contact page — same text appears in the contact info sidebar
 
 ---
 
@@ -624,7 +621,7 @@ Ask your developer to implement these (not manual dashboard setup):
 
 | What to change | Where | How |
 |----------------|-------|-----|
-| Phone, email, license, nav, footer | `js/components.js` | Edit file → commit → push |
+| License number | `js/config.js` | Edit `licenseNumber` — populates footer + contact page |
 | Contact form endpoint | `pages/contact.html` | Change `action="..."` on `<form>` tag |
 | Form validation | `js/contact.js` | Developer only |
 | Service page content | `pages/*.html` | Edit file → commit → push |

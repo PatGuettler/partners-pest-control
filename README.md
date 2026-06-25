@@ -64,8 +64,7 @@ partners-pest-control/
 
 | File | Placeholder | Replace With |
 |---|---|---|
-| `js/components.js` | `[STATE-LICENSE]` | State license number |
-| `pages/contact.html` | `[STATE-LICENSE-NUMBER]` | State license number |
+| License number | `js/config.js` → `licenseNumber` | Populates footer and contact page automatically |
 | `pages/contact.html` | `action="#"` | Formspree endpoint URL (see below) |
 
 Phone `(256) 302-6660` and email `info@partnerspestsolutions.com` are already set.
