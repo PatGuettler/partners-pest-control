@@ -39,9 +39,11 @@
   // ── Active nav link ───────────────────────────────────────
   function initActiveLink() {
     const path   = window.location.pathname.split('/').pop() || 'index.html';
+    const isHome = path === '' || path === 'index.html';
     const links  = document.querySelectorAll('.nav__link[data-page]');
     links.forEach(l => {
-      if (l.dataset.page === path) l.classList.add('active');
+      if (isHome && l.dataset.page === 'index.html') l.classList.add('active');
+      else if (l.dataset.page === path) l.classList.add('active');
     });
   }
 

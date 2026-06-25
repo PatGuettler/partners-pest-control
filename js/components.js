@@ -22,14 +22,14 @@
   const NAV_HTML = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav__inner">
-        <a href="../index.html" class="nav__logo" aria-label="Partners Pest Solutions - Home">
+        <a href="/" class="nav__logo" aria-label="Partners Pest Solutions - Home">
           <img src="../images/logo.jpg" alt="Partners Pest Solutions logo" width="110" height="101">
         </a>
         <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav__links" role="list">
-          <li><a class="nav__link" href="../index.html"              data-page="index.html">Home</a></li>
+          <li><a class="nav__link" href="/"                         data-page="index.html">Home</a></li>
           <li><a class="nav__link" href="../pages/residential.html"  data-page="residential.html">Residential</a></li>
           <li><a class="nav__link" href="../pages/commercial.html"   data-page="commercial.html">Commercial</a></li>
           <li><a class="nav__link" href="../pages/bed-bug.html"       data-page="bed-bug.html">Bed Bugs</a></li>
@@ -65,7 +65,7 @@
           <div>
             <p class="footer__heading">Company</p>
             <ul class="footer__links">
-              <li><a class="footer__link" href="../index.html">Home</a></li>
+              <li><a class="footer__link" href="/">Home</a></li>
               <li><a class="footer__link" href="../pages/about.html">About Us</a></li>
               <li><a class="footer__link" href="../pages/contact.html">Contact Us</a></li>
             </ul>
@@ -87,14 +87,13 @@
     </footer>`;
 
   // Root-relative variant for index.html (one level up)
-  const NAV_HTML_ROOT = NAV_HTML.replace(/\.\.\/index\.html/g, 'index.html')
+  const NAV_HTML_ROOT = NAV_HTML
     .replace(/\.\.\/images\//g, 'images/')
     .replace(/\.\.\/pages\//g, 'pages/');
 
   const FOOTER_HTML_ROOT = FOOTER_HTML
     .replace(/\.\.\/images\//g, 'images/')
-    .replace(/\.\.\/pages\//g, 'pages/')
-    .replace(/\.\.\/index\.html/g, 'index.html');
+    .replace(/\.\.\/pages\//g, 'pages/');
 
   function isRoot() {
     const path = window.location.pathname;
