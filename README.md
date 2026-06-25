@@ -1,6 +1,6 @@
 # Partners Pest Solutions — Website
 
-Static HTML/CSS/JS website for [partnerspestsolutions.com](https://partnerspestsolutions.com). No build step required — upload and go.
+Static HTML/CSS/JS website for [partnerspestsolutions.com](https://partnerspestsolutions.com). Source lives in the repo root; `deploy/build.sh` packages deployable files into `dist/` for GitHub Pages and AWS.
 
 **→ See [PLAN.md](./PLAN.md) for the full go-live checklist and step-by-step manual setup instructions for every remaining item.**
 
@@ -10,6 +10,10 @@ Static HTML/CSS/JS website for [partnerspestsolutions.com](https://partnerspests
 
 ```
 partners-pest-control/
+├── .github/workflows/      ← CI/CD (GitHub Pages + AWS)
+├── deploy/
+│   ├── build.sh            ← Packages site → dist/
+│   └── aws/README.md       ← AWS S3 + CloudFront setup guide
 ├── index.html              ← Home page
 ├── pages/
 │   ├── residential.html    ← Residential pest control
@@ -49,14 +53,35 @@ partners-pest-control/
 
 ---
 
-## Deploy to GitHub Pages
+## Deploy
 
-1. Upload all files to your GitHub repository (maintain the folder structure)
+### GitHub Pages (current)
+
+Deployments run automatically via GitHub Actions on every push to `main`.
+
+**One-time setup** (if not already done):
+
+1. Push this repo to GitHub
 2. Go to **Settings → Pages**
-3. Set source to **Deploy from a branch**
-4. Select branch: `main`, folder: `/ (root)`
-5. Click **Save** — your site will be live at `https://YOUR-USERNAME.github.io/REPO-NAME/`
-6. Point `partnerspestsolutions.com` DNS to GitHub Pages (or use Cloudflare Pages for simpler custom domain setup)
+3. Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch")
+4. Push to `main` — the **Deploy to GitHub Pages** workflow runs automatically
+5. Site URL: `https://patguettler.github.io/partners-pest-control/`
+
+Workflow file: `.github/workflows/github-pages.yml`
+
+**Local preview:**
+
+```bash
+bash deploy/build.sh
+cd dist && python3 -m http.server 8080
+# Open http://localhost:8080
+```
+
+### AWS (optional)
+
+For S3 + CloudFront production hosting, see **[deploy/aws/README.md](./deploy/aws/README.md)**.
+
+Workflow file: `.github/workflows/deploy-aws.yml` (manual trigger after AWS secrets are configured)
 
 ---
 
