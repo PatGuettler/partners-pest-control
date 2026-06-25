@@ -117,7 +117,7 @@
         }
       } catch {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Request Inspection';
+        submitBtn.textContent = 'Send Message';
         alert('Something went wrong. Please try again or call us directly.');
       }
     });

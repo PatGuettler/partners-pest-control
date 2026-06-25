@@ -328,7 +328,7 @@
   gap: var(--sp-10);
   margin-bottom: var(--sp-12);
 }
-.footer__logo { height: 60px; width: auto; margin-bottom: var(--sp-4); }
+.footer__logo { height: 90px; width: auto; margin-bottom: var(--sp-4); }
 .footer__tagline { font-size: var(--text-sm); line-height: 1.7; max-width: 280px; }
 .footer__heading {
   font-family: var(--font-display);

@@ -29,7 +29,7 @@
   text-decoration: none;
 }
 .nav__logo img {
-  height: 48px;
+  height: 80px;
   width: auto;
 }
 
@@ -66,6 +66,11 @@
 .nav__link.active::after { width: 100%; }
 
 .nav__cta { margin-left: var(--sp-4); }
+.nav__cta .btn {
+  font-size: var(--text-xs);
+  padding: var(--sp-3) var(--sp-4);
+  white-space: nowrap;
+}
 
 /* Hamburger */
 .nav__toggle {
